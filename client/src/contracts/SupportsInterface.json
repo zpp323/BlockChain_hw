@@ -1,0 +1,1649 @@
+{
+  "contractName": "SupportsInterface",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Implementation of standard for detect smart contract interfaces.\",\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Contract constructor.\"},\"supportsInterface(bytes4)\":{\"details\":\"Function to check which interfaces are suported by this contract.\",\"params\":{\"_interfaceID\":\"Id of the interface.\"},\"returns\":{\"_0\":\"True if _interfaceID is supported, false otherwise.\"}}},\"stateVariables\":{\"supportedInterfaces\":{\"details\":\"Mapping of supported intefraces. You must not set element 0xffffffff to true.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/ethereum-erc721/src/contracts/utils/supports-interface.sol\":\"SupportsInterface\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/ethereum-erc721/src/contracts/utils/erc165.sol\":{\"keccak256\":\"0xc16cf559388e294ea8b6473234aa86c8d8a314fe8a2cb6f53b96e7b7e6e1e54b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b4d7b9a5d25977f53472f5ebccf0cf6a316a0c305a640c7567ff9f72e137a39e\",\"dweb:/ipfs/QmYWdMWBXGG59dyXt6fWWfER4JTSJBKviMY5Q93X1Kex6J\"]},\"project:/ethereum-erc721/src/contracts/utils/supports-interface.sol\":{\"keccak256\":\"0x07ee2985848edcc2d89886163068dcbe2e63f8d861ffb7325cd66125e237a953\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9fb3198582468641c04f8ac1f18986c9d481cfff5a470fa22fe7da640fa1af25\",\"dweb:/ipfs/QmQA4U2U2SkkbKN1BgTaMWCZensnhMPKvSLd8oyBdFrcq3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060016000806301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060006101000a81548160ff0219169083151502179055506101bd806100716000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806301ffc9a714610030575b600080fd5b61004a600480360381019061004591906100dc565b610060565b6040516100579190610118565b60405180910390f35b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060009054906101000a900460ff169050919050565b6000813590506100d681610170565b92915050565b6000602082840312156100f2576100f161016b565b5b6000610100848285016100c7565b91505092915050565b61011281610133565b82525050565b600060208201905061012d6000830184610109565b92915050565b60008115159050919050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b600080fd5b6101798161013f565b811461018457600080fd5b5056fea26469706673582212206a1d80bc9146acdbc821012e9f3a00aaa245fa80249f17bd5051375e35514db064736f6c63430008060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806301ffc9a714610030575b600080fd5b61004a600480360381019061004591906100dc565b610060565b6040516100579190610118565b60405180910390f35b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060009054906101000a900460ff169050919050565b6000813590506100d681610170565b92915050565b6000602082840312156100f2576100f161016b565b5b6000610100848285016100c7565b91505092915050565b61011281610133565b82525050565b600060208201905061012d6000830184610109565b92915050565b60008115159050919050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b600080fd5b6101798161013f565b811461018457600080fd5b5056fea26469706673582212206a1d80bc9146acdbc821012e9f3a00aaa245fa80249f17bd5051375e35514db064736f6c63430008060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:1515:10",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "58:86:10",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "68:29:10",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "offset",
+                        "nodeType": "YulIdentifier",
+                        "src": "90:6:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "calldataload",
+                      "nodeType": "YulIdentifier",
+                      "src": "77:12:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "77:20:10"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "value",
+                      "nodeType": "YulIdentifier",
+                      "src": "68:5:10"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "132:5:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "validator_revert_t_bytes4",
+                      "nodeType": "YulIdentifier",
+                      "src": "106:25:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "106:32:10"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "106:32:10"
+                }
+              ]
+            },
+            "name": "abi_decode_t_bytes4",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "offset",
+                "nodeType": "YulTypedName",
+                "src": "36:6:10",
+                "type": ""
+              },
+              {
+                "name": "end",
+                "nodeType": "YulTypedName",
+                "src": "44:3:10",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "52:5:10",
+                "type": ""
+              }
+            ],
+            "src": "7:137:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "215:262:10",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "261:83:10",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [],
+                          "functionName": {
+                            "name": "revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b",
+                            "nodeType": "YulIdentifier",
+                            "src": "263:77:10"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "263:79:10"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "263:79:10"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "236:7:10"
+                          },
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "245:9:10"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "sub",
+                          "nodeType": "YulIdentifier",
+                          "src": "232:3:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "232:23:10"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "257:2:10",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "slt",
+                      "nodeType": "YulIdentifier",
+                      "src": "228:3:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "228:32:10"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "225:2:10"
+                },
+                {
+                  "nodeType": "YulBlock",
+                  "src": "354:116:10",
+                  "statements": [
+                    {
+                      "nodeType": "YulVariableDeclaration",
+                      "src": "369:15:10",
+                      "value": {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "383:1:10",
+                        "type": "",
+                        "value": "0"
+                      },
+                      "variables": [
+                        {
+                          "name": "offset",
+                          "nodeType": "YulTypedName",
+                          "src": "373:6:10",
+                          "type": ""
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "YulAssignment",
+                      "src": "398:62:10",
+                      "value": {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "name": "headStart",
+                                "nodeType": "YulIdentifier",
+                                "src": "432:9:10"
+                              },
+                              {
+                                "name": "offset",
+                                "nodeType": "YulIdentifier",
+                                "src": "443:6:10"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "add",
+                              "nodeType": "YulIdentifier",
+                              "src": "428:3:10"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "428:22:10"
+                          },
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "452:7:10"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "abi_decode_t_bytes4",
+                          "nodeType": "YulIdentifier",
+                          "src": "408:19:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "408:52:10"
+                      },
+                      "variableNames": [
+                        {
+                          "name": "value0",
+                          "nodeType": "YulIdentifier",
+                          "src": "398:6:10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_decode_tuple_t_bytes4",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "185:9:10",
+                "type": ""
+              },
+              {
+                "name": "dataEnd",
+                "nodeType": "YulTypedName",
+                "src": "196:7:10",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "208:6:10",
+                "type": ""
+              }
+            ],
+            "src": "150:327:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "542:50:10",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "559:3:10"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "579:5:10"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_bool",
+                          "nodeType": "YulIdentifier",
+                          "src": "564:14:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "564:21:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "552:6:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "552:34:10"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "552:34:10"
+                }
+              ]
+            },
+            "name": "abi_encode_t_bool_to_t_bool_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "530:5:10",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "537:3:10",
+                "type": ""
+              }
+            ],
+            "src": "483:109:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "690:118:10",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "700:26:10",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "712:9:10"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "723:2:10",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "708:3:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "708:18:10"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "700:4:10"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "774:6:10"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "787:9:10"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "798:1:10",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "783:3:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "783:17:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_bool_to_t_bool_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "736:37:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "736:65:10"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "736:65:10"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "662:9:10",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "674:6:10",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "685:4:10",
+                "type": ""
+              }
+            ],
+            "src": "598:210:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "854:35:10",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "864:19:10",
+                  "value": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "880:2:10",
+                        "type": "",
+                        "value": "64"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mload",
+                      "nodeType": "YulIdentifier",
+                      "src": "874:5:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "874:9:10"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "memPtr",
+                      "nodeType": "YulIdentifier",
+                      "src": "864:6:10"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "allocate_unbounded",
+            "nodeType": "YulFunctionDefinition",
+            "returnVariables": [
+              {
+                "name": "memPtr",
+                "nodeType": "YulTypedName",
+                "src": "847:6:10",
+                "type": ""
+              }
+            ],
+            "src": "814:75:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "937:48:10",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "947:32:10",
+                  "value": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "972:5:10"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "iszero",
+                          "nodeType": "YulIdentifier",
+                          "src": "965:6:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "965:13:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "958:6:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "958:21:10"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "947:7:10"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_bool",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "919:5:10",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "929:7:10",
+                "type": ""
+              }
+            ],
+            "src": "895:90:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1035:105:10",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1045:89:10",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "1060:5:10"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1067:66:10",
+                        "type": "",
+                        "value": "0xffffffff00000000000000000000000000000000000000000000000000000000"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "1056:3:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1056:78:10"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "1045:7:10"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_bytes4",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1017:5:10",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "1027:7:10",
+                "type": ""
+              }
+            ],
+            "src": "991:149:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1235:28:10",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1252:1:10",
+                        "type": "",
+                        "value": "0"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1255:1:10",
+                        "type": "",
+                        "value": "0"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "revert",
+                      "nodeType": "YulIdentifier",
+                      "src": "1245:6:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1245:12:10"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1245:12:10"
+                }
+              ]
+            },
+            "name": "revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db",
+            "nodeType": "YulFunctionDefinition",
+            "src": "1146:117:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1358:28:10",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1375:1:10",
+                        "type": "",
+                        "value": "0"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1378:1:10",
+                        "type": "",
+                        "value": "0"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "revert",
+                      "nodeType": "YulIdentifier",
+                      "src": "1368:6:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1368:12:10"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1368:12:10"
+                }
+              ]
+            },
+            "name": "revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b",
+            "nodeType": "YulFunctionDefinition",
+            "src": "1269:117:10"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1434:78:10",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "1490:16:10",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1499:1:10",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1502:1:10",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "1492:6:10"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1492:12:10"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1492:12:10"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "1457:5:10"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "name": "value",
+                                "nodeType": "YulIdentifier",
+                                "src": "1481:5:10"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "cleanup_t_bytes4",
+                              "nodeType": "YulIdentifier",
+                              "src": "1464:16:10"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "1464:23:10"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "eq",
+                          "nodeType": "YulIdentifier",
+                          "src": "1454:2:10"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1454:34:10"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "1447:6:10"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1447:42:10"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "1444:2:10"
+                }
+              ]
+            },
+            "name": "validator_revert_t_bytes4",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1427:5:10",
+                "type": ""
+              }
+            ],
+            "src": "1392:120:10"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_bytes4(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function cleanup_t_bytes4(value) -> cleaned {\n        cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function validator_revert_t_bytes4(value) {\n        if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 10,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "169:722:9:-:0;;;426:78;;;;;;;;;;484:4;450:19;:31;470:10;450:31;;;;;;;;;;;;;;;;;:38;;;;;;;;;;;;;;;;;;169:722;;;;;;",
+  "deployedSourceMap": "169:722:9:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;714:172;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;824:4;847:19;:33;867:12;847:33;;;;;;;;;;;;;;;;;;;;;;;;;;;840:40;;714:172;;;:::o;7:137:10:-;52:5;90:6;77:20;68:29;;106:32;132:5;106:32;:::i;:::-;58:86;;;;:::o;150:327::-;208:6;257:2;245:9;236:7;232:23;228:32;225:2;;;263:79;;:::i;:::-;225:2;383:1;408:52;452:7;443:6;432:9;428:22;408:52;:::i;:::-;398:62;;354:116;215:262;;;;:::o;483:109::-;564:21;579:5;564:21;:::i;:::-;559:3;552:34;542:50;;:::o;598:210::-;685:4;723:2;712:9;708:18;700:26;;736:65;798:1;787:9;783:17;774:6;736:65;:::i;:::-;690:118;;;;:::o;895:90::-;929:7;972:5;965:13;958:21;947:32;;937:48;;;:::o;991:149::-;1027:7;1067:66;1060:5;1056:78;1045:89;;1035:105;;;:::o;1269:117::-;1378:1;1375;1368:12;1392:120;1464:23;1481:5;1464:23;:::i;:::-;1457:5;1454:34;1444:2;;1502:1;1499;1492:12;1444:2;1434:78;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.8.6;\r\n\r\nimport \"./erc165.sol\";\r\n\r\n/**\r\n * @dev Implementation of standard for detect smart contract interfaces.\r\n */\r\ncontract SupportsInterface is\r\n  ERC165\r\n{\r\n\r\n  /**\r\n   * @dev Mapping of supported intefraces. You must not set element 0xffffffff to true.\r\n   */\r\n  mapping(bytes4 => bool) internal supportedInterfaces;\r\n\r\n  /**\r\n   * @dev Contract constructor.\r\n   */\r\n  constructor()\r\n  {\r\n    supportedInterfaces[0x01ffc9a7] = true; // ERC165\r\n  }\r\n\r\n  /**\r\n   * @dev Function to check which interfaces are suported by this contract.\r\n   * @param _interfaceID Id of the interface.\r\n   * @return True if _interfaceID is supported, false otherwise.\r\n   */\r\n  function supportsInterface(\r\n    bytes4 _interfaceID\r\n  )\r\n    external\r\n    override\r\n    view\r\n    returns (bool)\r\n  {\r\n    return supportedInterfaces[_interfaceID];\r\n  }\r\n\r\n}\r\n",
+  "sourcePath": "D:\\ZJU5\\区块链与数字货币\\大作业\\hw\\ethereum-erc721\\src\\contracts\\utils\\supports-interface.sol",
+  "ast": {
+    "absolutePath": "project:/ethereum-erc721/src/contracts/utils/supports-interface.sol",
+    "exportedSymbols": {
+      "ERC165": [
+        1788
+      ],
+      "SupportsInterface": [
+        1825
+      ]
+    },
+    "id": 1826,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1790,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:9"
+      },
+      {
+        "absolutePath": "project:/ethereum-erc721/src/contracts/utils/erc165.sol",
+        "file": "./erc165.sol",
+        "id": 1791,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1826,
+        "sourceUnit": 1789,
+        "src": "59:22:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1793,
+              "name": "ERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1788,
+              "src": "202:6:9"
+            },
+            "id": 1794,
+            "nodeType": "InheritanceSpecifier",
+            "src": "202:6:9"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1792,
+          "nodeType": "StructuredDocumentation",
+          "src": "85:82:9",
+          "text": " @dev Implementation of standard for detect smart contract interfaces."
+        },
+        "fullyImplemented": true,
+        "id": 1825,
+        "linearizedBaseContracts": [
+          1825,
+          1788
+        ],
+        "name": "SupportsInterface",
+        "nameLocation": "178:17:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 1795,
+              "nodeType": "StructuredDocumentation",
+              "src": "217:99:9",
+              "text": " @dev Mapping of supported intefraces. You must not set element 0xffffffff to true."
+            },
+            "id": 1799,
+            "mutability": "mutable",
+            "name": "supportedInterfaces",
+            "nameLocation": "353:19:9",
+            "nodeType": "VariableDeclaration",
+            "scope": 1825,
+            "src": "320:52:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+              "typeString": "mapping(bytes4 => bool)"
+            },
+            "typeName": {
+              "id": 1798,
+              "keyType": {
+                "id": 1796,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "328:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "320:23:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                "typeString": "mapping(bytes4 => bool)"
+              },
+              "valueType": {
+                "id": 1797,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "338:4:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1809,
+              "nodeType": "Block",
+              "src": "443:61:9",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1807,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 1803,
+                        "name": "supportedInterfaces",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1799,
+                        "src": "450:19:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 1805,
+                      "indexExpression": {
+                        "hexValue": "30783031666663396137",
+                        "id": 1804,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "470:10:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_33540519_by_1",
+                          "typeString": "int_const 33540519"
+                        },
+                        "value": "0x01ffc9a7"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "450:31:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 1806,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "484:4:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "450:38:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1808,
+                  "nodeType": "ExpressionStatement",
+                  "src": "450:38:9"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1800,
+              "nodeType": "StructuredDocumentation",
+              "src": "379:43:9",
+              "text": " @dev Contract constructor."
+            },
+            "id": 1810,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "437:2:9"
+            },
+            "returnParameters": {
+              "id": 1802,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:9"
+            },
+            "scope": 1825,
+            "src": "426:78:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              1787
+            ],
+            "body": {
+              "id": 1823,
+              "nodeType": "Block",
+              "src": "833:53:9",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 1819,
+                      "name": "supportedInterfaces",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1799,
+                      "src": "847:19:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                        "typeString": "mapping(bytes4 => bool)"
+                      }
+                    },
+                    "id": 1821,
+                    "indexExpression": {
+                      "id": 1820,
+                      "name": "_interfaceID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1813,
+                      "src": "867:12:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "847:33:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1818,
+                  "id": 1822,
+                  "nodeType": "Return",
+                  "src": "840:40:9"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1811,
+              "nodeType": "StructuredDocumentation",
+              "src": "510:200:9",
+              "text": " @dev Function to check which interfaces are suported by this contract.\n @param _interfaceID Id of the interface.\n @return True if _interfaceID is supported, false otherwise."
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 1824,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "723:17:9",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 1815,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "791:8:9"
+            },
+            "parameters": {
+              "id": 1814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1813,
+                  "mutability": "mutable",
+                  "name": "_interfaceID",
+                  "nameLocation": "754:12:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1824,
+                  "src": "747:19:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1812,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "740:31:9"
+            },
+            "returnParameters": {
+              "id": 1818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1817,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1824,
+                  "src": "824:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1816,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:6:9"
+            },
+            "scope": 1825,
+            "src": "714:172:9",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1826,
+        "src": "169:722:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:860:9"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/ethereum-erc721/src/contracts/utils/supports-interface.sol",
+    "exportedSymbols": {
+      "ERC165": [
+        1788
+      ],
+      "SupportsInterface": [
+        1825
+      ]
+    },
+    "id": 1826,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1790,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:9"
+      },
+      {
+        "absolutePath": "project:/ethereum-erc721/src/contracts/utils/erc165.sol",
+        "file": "./erc165.sol",
+        "id": 1791,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1826,
+        "sourceUnit": 1789,
+        "src": "59:22:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1793,
+              "name": "ERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1788,
+              "src": "202:6:9"
+            },
+            "id": 1794,
+            "nodeType": "InheritanceSpecifier",
+            "src": "202:6:9"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1792,
+          "nodeType": "StructuredDocumentation",
+          "src": "85:82:9",
+          "text": " @dev Implementation of standard for detect smart contract interfaces."
+        },
+        "fullyImplemented": true,
+        "id": 1825,
+        "linearizedBaseContracts": [
+          1825,
+          1788
+        ],
+        "name": "SupportsInterface",
+        "nameLocation": "178:17:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 1795,
+              "nodeType": "StructuredDocumentation",
+              "src": "217:99:9",
+              "text": " @dev Mapping of supported intefraces. You must not set element 0xffffffff to true."
+            },
+            "id": 1799,
+            "mutability": "mutable",
+            "name": "supportedInterfaces",
+            "nameLocation": "353:19:9",
+            "nodeType": "VariableDeclaration",
+            "scope": 1825,
+            "src": "320:52:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+              "typeString": "mapping(bytes4 => bool)"
+            },
+            "typeName": {
+              "id": 1798,
+              "keyType": {
+                "id": 1796,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "328:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "320:23:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                "typeString": "mapping(bytes4 => bool)"
+              },
+              "valueType": {
+                "id": 1797,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "338:4:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1809,
+              "nodeType": "Block",
+              "src": "443:61:9",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1807,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 1803,
+                        "name": "supportedInterfaces",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1799,
+                        "src": "450:19:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 1805,
+                      "indexExpression": {
+                        "hexValue": "30783031666663396137",
+                        "id": 1804,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "470:10:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_33540519_by_1",
+                          "typeString": "int_const 33540519"
+                        },
+                        "value": "0x01ffc9a7"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "450:31:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 1806,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "484:4:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "450:38:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1808,
+                  "nodeType": "ExpressionStatement",
+                  "src": "450:38:9"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1800,
+              "nodeType": "StructuredDocumentation",
+              "src": "379:43:9",
+              "text": " @dev Contract constructor."
+            },
+            "id": 1810,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "437:2:9"
+            },
+            "returnParameters": {
+              "id": 1802,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:9"
+            },
+            "scope": 1825,
+            "src": "426:78:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              1787
+            ],
+            "body": {
+              "id": 1823,
+              "nodeType": "Block",
+              "src": "833:53:9",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 1819,
+                      "name": "supportedInterfaces",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1799,
+                      "src": "847:19:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                        "typeString": "mapping(bytes4 => bool)"
+                      }
+                    },
+                    "id": 1821,
+                    "indexExpression": {
+                      "id": 1820,
+                      "name": "_interfaceID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1813,
+                      "src": "867:12:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "847:33:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1818,
+                  "id": 1822,
+                  "nodeType": "Return",
+                  "src": "840:40:9"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1811,
+              "nodeType": "StructuredDocumentation",
+              "src": "510:200:9",
+              "text": " @dev Function to check which interfaces are suported by this contract.\n @param _interfaceID Id of the interface.\n @return True if _interfaceID is supported, false otherwise."
+            },
+            "functionSelector": "01ffc9a7",
+            "id": 1824,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "723:17:9",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 1815,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "791:8:9"
+            },
+            "parameters": {
+              "id": 1814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1813,
+                  "mutability": "mutable",
+                  "name": "_interfaceID",
+                  "nameLocation": "754:12:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1824,
+                  "src": "747:19:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1812,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "740:31:9"
+            },
+            "returnParameters": {
+              "id": 1818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1817,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1824,
+                  "src": "824:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1816,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:6:9"
+            },
+            "scope": 1825,
+            "src": "714:172:9",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1826,
+        "src": "169:722:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:860:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.6+commit.11564f7e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-03T11:19:34.644Z",
+  "devdoc": {
+    "details": "Implementation of standard for detect smart contract interfaces.",
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "details": "Contract constructor."
+      },
+      "supportsInterface(bytes4)": {
+        "details": "Function to check which interfaces are suported by this contract.",
+        "params": {
+          "_interfaceID": "Id of the interface."
+        },
+        "returns": {
+          "_0": "True if _interfaceID is supported, false otherwise."
+        }
+      }
+    },
+    "stateVariables": {
+      "supportedInterfaces": {
+        "details": "Mapping of supported intefraces. You must not set element 0xffffffff to true."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

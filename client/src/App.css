@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mynft{
+  background-color: black;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items:center;
+}
+
+.header-empty{
+  width: 43.2vw;
+  height: 60px;
+}
+
+.nft{
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+.aut-region{
+  width: 100vw;
+  height: 80px;
+  font-size: 50px;
+}
+
+.make{
+  font-size: 10px;
+  width: 8vw;
+}
+
+.show_aut{
+  width: 80vw;
+  height: 30vw;
+  display: flex;
+}
+
+.show_my{
+  font-size: 50px;
+}
+
+.show_my_nft{
+  display: flex;
+}
+
+.nftnode{
+  width: 30vw;
+  text-align: center;
+  height: 50px;
+}
+
+.footer{
+  width: 100vw;
+  height: 90px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.refresh_auc{
+  background-color: cornflowerblue;
+  width: 60px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 20%;
+}
+
+.begin_auc{
+  font-size: 30px;
+}
+
+.bid{
+  font-size: 30px;
+}
+
+.claim{
+  font-size: 30px;
+}
+
+
