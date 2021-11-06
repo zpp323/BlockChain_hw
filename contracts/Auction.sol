@@ -29,6 +29,7 @@ contract Auction is NFTokenMetadata, Ownable {
     mapping(uint256 =>uint) auction_price;
     mapping(uint256 =>address payable) highest_bidder;
     mapping(uint256 =>address payable) beneficiary;
+    mapping(uint256 =>address[]) transer; 
 
     event HighestPriceIncreased(address bidder, uint amount);
     event AuctionEnded(address winner, uint amount);
@@ -39,12 +40,11 @@ contract Auction is NFTokenMetadata, Ownable {
         _tokenId = 0;
     }
 
-    function mint(address _to, string calldata _uri) external onlyOwner {
+    function mint(address _to, string calldata _uri, uint nowtime) external {
         _tokenId++;
         super._mint(_to, _tokenId);
         super._setTokenUri(_tokenId, _uri);
         is_on_auction[_tokenId] = false;
-        uint nowtime = block.timestamp;
         auction_end_time[_tokenId] = nowtime;
         auction_begin_time[_tokenId] = nowtime;
     }
@@ -66,13 +66,12 @@ contract Auction is NFTokenMetadata, Ownable {
         return count;
     }
 
-    function showClaim( address _address ) public view returns(uint256[] memory) {
+    function showClaim( address _address, uint nowtime ) public view returns(uint256[] memory) {
         uint256[] memory count = new uint256[](_tokenId);
         for(uint256 i=0;i<_tokenId;i++){
             count[i] = 0;
         }
         uint256 cou = 0;
-        uint nowtime = block.timestamp;
         for (uint256 index = 0; index < _tokenId ; index++) {
             if( is_on_auction[index+1] == true
             && (highest_bidder[index+1] == _address
@@ -91,7 +90,7 @@ contract Auction is NFTokenMetadata, Ownable {
             count[i].tokenid = 0;
         }
         for(uint256 i=0;i<_tokenId;i++){
-            if( is_on_auction[i] == true
+            if( is_on_auction[i+1] == true
                 && nowtime > auction_begin_time[i+1]
                 && nowtime < auction_end_time[i+1]
             ){
@@ -107,8 +106,25 @@ contract Auction is NFTokenMetadata, Ownable {
         return count;
     }
 
-    function beginAuction( uint begin_time, uint end_time, uint256 token, uint start_price, address payable beginner ) public {
-        uint nowtime = block.timestamp;
+    function showTransmission( uint256 tokenid ) public view returns (address[] memory) {
+        uint len = transer[tokenid].length;
+        uint allocate = len;
+        if(len == 0){
+            allocate = 1;
+        }
+        address[] memory count = new address[](allocate);
+        if(len != 0){
+            for(uint i=0;i<transer[tokenid].length;i++) {
+                count[i] = address(transer[tokenid][i]);
+            }
+        }
+        else{
+            count[0] = address(0);
+        }
+        return count;
+    }
+
+    function beginAuction( uint begin_time, uint end_time, uint256 token, uint start_price, address payable beginner, uint nowtime ) public {
         require( begin_time > nowtime );
         require( begin_time < end_time );
         require( token >0 );
@@ -123,8 +139,7 @@ contract Auction is NFTokenMetadata, Ownable {
         highest_bidder[token] = beginner;
     }
 
-    function bid( address payable bidder, uint256 token ) public payable {
-        uint nowtime = block.timestamp;
+    function bid( address payable bidder, uint256 token, uint nowtime ) public payable {
         uint amount = msg.value;
         require( nowtime >= auction_begin_time[token], "Auction starts later." );
         require( nowtime < auction_end_time[token], "Auction already ended." );
@@ -138,8 +153,7 @@ contract Auction is NFTokenMetadata, Ownable {
         emit HighestPriceIncreased( bidder, amount );
     }
 
-    function claim( uint256 tokenid ) public payable {
-        uint nowtime = block.timestamp;
+    function claim( uint256 tokenid, uint nowtime ) public payable {
         require( nowtime >= auction_end_time[tokenid], "Auction not yet ended." );
         require( is_on_auction[tokenid] == true , "It is not on auction." );
         require( msg.sender == highest_bidder[tokenid], "You cannot claim it." );
@@ -147,6 +161,7 @@ contract Auction is NFTokenMetadata, Ownable {
         is_on_auction[tokenid] = false;
         emit AuctionEnded( highest_bidder[tokenid], auction_price[tokenid] );
         beneficiary[tokenid].transfer(auction_price[tokenid]);
+        transer[tokenid].push(beneficiary[tokenid]);
         if(highest_bidder[tokenid] != beneficiary[tokenid]){
             address from = idToOwner[tokenid];
             delete idToApproval[tokenid];

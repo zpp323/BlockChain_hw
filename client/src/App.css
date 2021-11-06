@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -37,8 +39,12 @@
 }
 
 .make{
-  font-size: 10px;
+  font-size: 15px;
   width: 8vw;
+  height: 40px;
+  border-radius: 5%;
+  background-color: rgb(57, 192, 236);
+  margin-right: 10px;
 }
 
 .show_aut{
@@ -48,7 +54,12 @@
 }
 
 .show_my{
-  font-size: 50px;
+  font-size: 30px;
+  width: 30vw;
+  height: 60px;
+  line-height: 60px;
+  background-color: wheat;
+  border-radius: 3%;
 }
 
 .show_my_nft{
@@ -74,7 +85,7 @@
 .refresh_auc{
   background-color: cornflowerblue;
   width: 60px;
-  height: 40px;
+  height: 30px;
   font-size: 15px;
   border-radius: 20%;
 }
@@ -89,6 +100,13 @@
 
 .claim{
   font-size: 30px;
+  width: 40vw;
+  height: 60px;
+  background-color: beige;
+  border-radius: 3%;
 }
 
-
+.empty_1{
+  width: 100vw;
+  height: 50px;
+}
