@@ -1,1 +1,1 @@
-# BlockChain_hw
+# Homework of the BlockChain course, ZJU CS, 2022.
